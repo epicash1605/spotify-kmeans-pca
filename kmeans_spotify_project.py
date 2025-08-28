@@ -1,4 +1,4 @@
-# kmeans_spotify_project.py
+# K-Means clustering on Spotify audio features (PCA + metrics + plots)
 
 import os, shutil, warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -213,7 +213,7 @@ def main():
     except Exception as e:
         print("Skipping Plotly 3D (install with `pip install plotly` if you want it). Error:", e)
 
-    # ------------------ SAVE RESULTS ------------------------------------------
+# Save results (CSV + cluster profiles + selected features)
     out_csv = "spotify_clustered.csv"
     out_profiles = "cluster_profiles.csv"
     out_selected = "selected_features.txt"
@@ -239,3 +239,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
